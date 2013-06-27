@@ -146,11 +146,7 @@ target_architecture(ARCH)
 
 message(STATUS "${ARCH}")
 
-set(PVAPI_LIB "PvAPI")
-
-message(STATUS "${PVAPI_LIB}")
-
-find_library(PVAPI NAMES "${PVAPI_LIB}" PATHS "lib/${ARCH}")
+find_library(PVAPI NAMES "PvAPI" PATHS "lib/${ARCH}")
 
 message(STATUS "${PVAPI}")
 
@@ -159,13 +155,8 @@ catkin_package(
    LIBRARIES ${PVAPI}
    )
 
-add_library(${PVAPI_LIB} UNKNOWN IMPORTED)
-set_property(TARGET ${PVAPI_LIB} PROPERTY IMPORTED_LOCATION "${PVAPI}")
-
 install( DIRECTORY include/
    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
 
 install( FILES ${PVAPI}
    DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
-
-
