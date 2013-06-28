@@ -155,7 +155,7 @@ catkin_package(
    LIBRARIES ${PVAPI}
    )
 
-install( DIRECTORY include/
+install( DIRECTORY include/${PROJECT_NAME}/
    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
 
 install( FILES ${PVAPI}
