@@ -1,6 +1,6 @@
 <package>
    <name>prosilica_gige_sdk</name>
-   <version>1.26.1</version>
+   <version>1.26.2</version>
    <description>AVT GigE SDK version 1.26 for ROS</description>
    <maintainer email="ahendrix@willowgarage.com">Austin Hendrix</maintainer>
 
